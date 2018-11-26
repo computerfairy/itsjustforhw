@@ -24,7 +24,7 @@ public class main_menu {
 			} catch (Exception e) {
 				System.out.println();
 				System.out.println("숫자로  다시 입력해주세요.");
-				System.out.print("원하는 메뉴를 입력하세요: ");
+				System.out.print("원하는 메뉴를 입력하세요 : ");
 				userInput = new Scanner(System.in);
 				selectedMenu = userInput.nextInt();
 			}
@@ -43,15 +43,14 @@ public class main_menu {
 			} 
 			
 			if(selectedMenu == 3){
-				
-				ListAppointment AppointmentMenu = new ListAppointment();
-				AppointmentMenu.listAppointment();
-				
+				ListAppointment AppointmentListMenu = new ListAppointment();
+				AppointmentListMenu.listAppointment();
 			}
 			
 		}
 		
 		userInput.close();
+		
 	}
 
 }
