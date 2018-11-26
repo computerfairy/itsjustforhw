@@ -35,7 +35,7 @@ public class main_menu {
 			}
 			
 			if(selectedMenu == 1) {
-				
+				ContactsMenu ContactsMenu1 = new ContactsMenu();
 			}
 			
 			if(selectedMenu == 2) {
