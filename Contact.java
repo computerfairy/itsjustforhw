@@ -1,4 +1,3 @@
-
 public class Contact implements Comparable<Contact> {
 	String name;
 	String number;
