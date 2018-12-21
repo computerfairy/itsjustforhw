@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
 public class main_menu {
-
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		Scanner userInput = new Scanner(System.in);
 		int selectedMenu = 0;
 		
 		while(selectedMenu != 4) {
-			
 			System.out.println("##Personal Information Management##");
 			System.out.println("==============================");
 			System.out.println("1. Contacts");
@@ -44,13 +41,12 @@ public class main_menu {
 			
 			if(selectedMenu == 3){
 				ListAppointment AppointmentListMenu = new ListAppointment();
-				AppointmentListMenu.listAppointment();
+				try {
+					AppointmentListMenu.listAppointment();
+				} catch (Exception ex) {
+					System.err.println("Exception: " + ex.getMessage());
+				}
 			}
-			
 		}
-		
-		userInput.close();
-		
 	}
-
 }
