@@ -35,11 +35,16 @@ public class main_menu {
 			}
 			
 			if(selectedMenu == 1) {
+<<<<<<< Updated upstream
 				
+=======
+				ContactMenu ContactMenu1 = new ContactMenu();
+>>>>>>> Stashed changes
 			}
 			
 			if(selectedMenu == 2) {
-				
+				Todo TODOListMenu = new Todo();
+				TODOListMenu.startProgram();
 			} 
 			
 			if(selectedMenu == 3){
