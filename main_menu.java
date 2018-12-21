@@ -35,11 +35,13 @@ public class main_menu {
 			}
 			
 			if(selectedMenu == 1) {
-				ContactsMenu ContactsMenu1 = new ContactsMenu();
+				ContactMenu ContactMenu1 = new ContactMenu();
+
 			}
 			
 			if(selectedMenu == 2) {
-				
+				Todo TODOListMenu = new Todo();
+				TODOListMenu.startProgram();
 			} 
 			
 			if(selectedMenu == 3){
