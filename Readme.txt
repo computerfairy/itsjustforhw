@@ -8,5 +8,5 @@ CREATE TABLE MyAppointments(
 	primary key(aid) );
 
 //JUNIT 테스트를 수행하기 위해서는 적어도 1개 이상의 데이터가 필요합니다.
--테스트용 데이터
+-일정관리 테스트용 데이터
 insert into MyAppointments values('201812211','c1','18/12/21','l1','p1');
