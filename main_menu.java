@@ -1,36 +1,33 @@
-import java.util.Scanner;
+ï»¿import java.util.Scanner;
 
 public class main_menu {
-
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		Scanner userInput = new Scanner(System.in);
 		int selectedMenu = 0;
 		
 		while(selectedMenu != 4) {
-			
 			System.out.println("##Personal Information Management##");
 			System.out.println("==============================");
 			System.out.println("1. Contacts");
 			System.out.println("2. To-do lists");
 			System.out.println("3. Appointments");
-			System.out.println("4. Á¾·á");
+			System.out.println("4. ì¢…ë£Œ");
 			System.out.println("==============================");
-			System.out.print("¿øÇÏ´Â ¸Ş´º¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ì›í•˜ëŠ” ë©”ë‰´ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 			
 			try { 
 				selectedMenu = userInput.nextInt();
 				System.out.println();
 			} catch (Exception e) {
 				System.out.println();
-				System.out.println("¼ıÀÚ·Î  ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				System.out.print("¿øÇÏ´Â ¸Ş´º¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+				System.out.println("ìˆ«ìë¡œ  ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+				System.out.print("ì›í•˜ëŠ” ë©”ë‰´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 				userInput = new Scanner(System.in);
 				selectedMenu = userInput.nextInt();
 			}
 			
 			if(selectedMenu < 1 || selectedMenu > 4) {
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.println();
 			}
 			
@@ -39,21 +36,20 @@ public class main_menu {
 
 			}
 			
-			if(selectedMenu == 2) {
+			if(selectedMenu == 2) { 
+
 				Todo TODOListMenu = new Todo();
 				TODOListMenu.startProgram();
 			} 
 			
 			if(selectedMenu == 3){
-				
-				ListAppointment AppointmentMenu = new ListAppointment();
-				AppointmentMenu.listAppointment();
-				
+				ListAppointment AppointmentListMenu = new ListAppointment();
+				try {
+					AppointmentListMenu.listAppointment();
+				} catch (Exception ex) {
+					System.err.println("Exception: " + ex.getMessage());
+				}
 			}
-			
 		}
-		
-		userInput.close();
 	}
-
 }
