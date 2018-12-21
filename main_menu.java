@@ -1,4 +1,4 @@
-import java.util.Scanner;
+﻿import java.util.Scanner;
 
 public class main_menu {
 	public static void main(String[] args) {	
@@ -38,7 +38,6 @@ public class main_menu {
 			if(selectedMenu == 2) { 
 				Todo TODOListMenu = new Todo();
 				TODOListMenu.startProgram();
-				
 			} 
 			
 			if(selectedMenu == 3){
